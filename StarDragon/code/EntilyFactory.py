@@ -1,5 +1,5 @@
 #!/usr/bin/python
-#-*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 
 class EntilyFactory:
     def __init__(self):
@@ -7,4 +7,3 @@ class EntilyFactory:
 
     def get_entity(self, entity_type):
         pass
-

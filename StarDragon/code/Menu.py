@@ -18,7 +18,7 @@ class Menu:
         pygame.mixer_music.play(-1)
         while True:
             self.Window.blit(source=self.Surf, dest=self.rect)
-            self.menu_text(80, "Dragon", (236, 28, 36), ((WIN_WIDTH/2), 100))
+            self.menu_text(80, "DragonStar", (236, 28, 36), ((WIN_WIDTH/2), 100))
             pygame.display.flip()
 
     def menu_text(self, text_size: int, text: str, text_color: tuple, text_center_pos: tuple):
