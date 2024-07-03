@@ -1,12 +1,24 @@
 #!/usr/bin/python
-#-*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+import pygame.display
+from pygame import Surface
+
+from code.Entity import Entity
+from code.EntityFactory import EntityFactory
+
 
 class Level:
-    def __init__(self):
-        self.Window = None
-        self.entity_list = None
-        self.name = None
+    def __init__(self, window, name, menu_option):
+        self.Window :Surface= window
+        self.name = name
+        self.mode = menu_option
+        self.entity_list: list[Entity] = []
+        self.entity_list.append(EntityFactory.get_entity('Level1Bg0', (0, 0)))
 
     def run(self, ):
-        pass
+        while True:
+            for ent in self.entity_list:
+                self.Window.blit(source=ent.surf, dest=ent.rect)
+            pygame.display.flip()
 
+        pass
